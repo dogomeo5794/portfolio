@@ -1,0 +1,23 @@
+@media screen and (min-width: 640px) {
+  .job-card:nth-child(2n) {
+    transform: translateX(100%);
+    padding-right: 0;
+  }
+
+  .job-card:nth-child(2n + 1) {
+    padding-left: 0;
+    padding-right: 1.5rem;
+  }
+
+  .job-card:nth-child(2n + 1) .job-picture {
+    left: calc(100% + 2rem);
+  }
+
+  .job-card:nth-child(2n) .job-picture {
+    left: calc(-120px - 2rem);
+  }
+
+  .job-card:nth-child(2n + 1) .circle {
+    left: calc(100% - 10px);
+  }
+}

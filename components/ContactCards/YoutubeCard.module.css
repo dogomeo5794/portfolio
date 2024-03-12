@@ -1,0 +1,30 @@
+li {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    overflow: hidden;
+}
+
+.contact-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.15rem;
+}
+
+li small {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+li a {
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

@@ -8,13 +8,46 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        light: {
+          fondo: {
+            primary: "#fafbfc",
+            secondary: "#fff",
+          },
+          texto: {
+            primary: "#191919",
+            secondary: "#252525",
+          },
+          gray: {
+            primary: "#666",
+            secondary: "#bbb",
+          },
+        },
+        dark: {
+          fondo: {
+            primary: "#121212",
+            secondary: "#1a1a1a",
+          },
+          texto: {
+            primary: "#f3f3f3",
+            secondary: "#ccc",
+          },
+          gray: {
+            primary: "#999",
+            secondary: "#555",
+          },
+        },
+        primary: "#006fff",
+      },
+      gridTemplateColumns: {
+        modal: "auto 23rem",
+      },
+      maxHeight: {
+        "accordion-expanded": "500px",
       },
     },
   },
+  darkMode: "class",
   plugins: [],
 };
 export default config;
