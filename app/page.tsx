@@ -19,6 +19,10 @@ import HomeSection from "@/components/sections/HomeSection/HomeSection";
 import SkillsSection from "@/components/sections/SkillsSection/SkillsSection";
 import JobsSection from "@/components/sections/JobsSection/JobsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection/ProjectsSection";
+import EducationSection from "@/components/sections/EducationSection/EducationSection";
+import FooterSection from "@/components/sections/FooterSection/FooterSection";
+// import HerosSection from "@/components/sections/HerosSection/HerosSection";
+import ReferenceSection from "@/components/sections/ReferenceSection/ReferenceSection";
 
 export default function Home() {
   return (
@@ -30,9 +34,11 @@ export default function Home() {
           <SkillsSection />
           <JobsSection />
           <ProjectsSection />
-          {/* <EducationSection /> */}
+          <EducationSection />
           <ContactSection />
-          {/* <Footer /> */}
+          {/* <HerosSection /> */}
+          <ReferenceSection />
+          <FooterSection />
       </Main>
     </>
   )

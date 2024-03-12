@@ -40,6 +40,7 @@ const ProjectsSection = () => {
     <>
       <section
         className="projects-section flex pt-16 pb-20 flex-col gap-12"
+        id="projects"
       >
         <h1 className="font-black text-light-texto-primary dark:text-dark-texto-primary text-[2.5rem]">
           Projects<span className="text-primary">.</span>
@@ -50,7 +51,7 @@ const ProjectsSection = () => {
           ))}
         </div>
       </section>
-      
+
       {selectedProject && (
         <ProjectModal {...selectedProject} showModal={showModal} onCloseModal={handleCloseModal} />
       )}

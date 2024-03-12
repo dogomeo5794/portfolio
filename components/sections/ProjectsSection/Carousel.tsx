@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 interface Props {
@@ -58,11 +59,14 @@ const Carousel: React.FC<Props> = ({ images, path = "" }) => {
             key={image}
             data-index={index}
           >
-            <img
+            <Image
               className="w-full h-full"
               src={`/projects/${path}/${image}`}
               alt=""
               loading="lazy"
+              width={100}
+              height={100}
+              loader={(src) => src.src}
             />
           </li>
         ))}

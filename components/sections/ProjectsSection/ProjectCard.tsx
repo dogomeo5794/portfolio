@@ -1,5 +1,6 @@
 import React from "react";
 import { ProjectProps } from "./ProjectsSection";
+import Image from "next/image";
 
 interface Props extends ProjectProps {
   onOpenModal: (project: ProjectProps) => void
@@ -37,11 +38,14 @@ const ProjectCard: React.FC<Props> = (props) => {
         className="group flex flex-col items-center justify-center rounded-3xl overflow-hidden open-modal-btn"
         onClick={handleOpenModal}
       >
-        <img
+        <Image
           className="w-full h-fit transition-transform group-hover:scale-[1.05] group-hover:cursor-pointer"
           src={`/projects/${id}/${carouselImages[0]}`}
           alt={`Logo of ${projectTitle} project`}
           loading="lazy"
+          width={100}
+          height={100}
+          loader={(src) => src.src}
         />
       </div>
       <div className="flex items-center justify-between gap-2 max-h-full overflow-hidden">

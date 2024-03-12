@@ -15,6 +15,8 @@ export const FIRST_NAME = "Ronald";
 export const MIDDLE_NAME = "Recibido";
 export const LAST_NAME = "Dogomeo";
 export const YEAR_OF_EXPERIENCE = "3+";
-export const LINE_OF_CODES = "Millions";
+export const LINE_OF_CODES = "Million";
 export const CUP_OF_COFFEE = "3-5";
 export const RESUME_URL = "/files/ronald-dogomeo-resume.pdf";
+
+export const GITHUB_PORTFOLIO_THEME = "https://github.com/dogomeo5794/portfolio"

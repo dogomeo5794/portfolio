@@ -4,8 +4,9 @@ import React from "react";
 
 import { skills } from "@/lib/skills-data";
 import "./style.css"
+import Image from "next/image";
 
-export default function () {
+const SkillsSection: React.FC =  () => {
   return (
     <section className="skills-section" id="skills">
       <h1 className="font-black text-light-texto-primary dark:text-dark-texto-primary text-[2.5rem]">
@@ -131,12 +132,16 @@ export default function () {
           <ul className="skills-list hard">
             {skills.map((skill, index) => (
               <li key={index}>
-                <img
+                <Image
                   src={`/icons/${skill.logo}`}
                   alt=""
-                  height="auto"
-                  width="45%"
+                  // height="auto"
+                  // width="45%"
                   loading="lazy"
+                  width={100}
+                  height={100}
+                  loader={(src) => src.src}
+                  style={{ height: "auto", width: "45%" }}
                 />
                 {skill.skill}
               </li>
@@ -147,3 +152,5 @@ export default function () {
     </section>
   );
 };
+
+export default SkillsSection

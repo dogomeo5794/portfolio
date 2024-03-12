@@ -1,7 +1,17 @@
 import React from "react";
 
-import EducationCard from "../components/EducationCard.astro";
-import educationDegrees from "../data/education.json";
+import EducationCard from "./EducationCard";
+import { educations } from "@/lib/educations-data";
+
+export interface EducationProps {
+  id: string
+  educationPicture: string
+  educationTitle: string
+  educationType: string
+  educationTime: string
+  educationCompany: string
+  educationLink?: string
+}
 
 const EducationSection = () => {
   return (
@@ -10,8 +20,8 @@ const EducationSection = () => {
         Education<span className="text-primary">.</span>
       </h1>
       <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2">
-        {educationDegrees.map((education) => (
-          <EducationCard {...education} />
+        {educations.map((education: EducationProps, index: number) => (
+          <EducationCard {...education} key={index} />
         ))}
       </div>
     </section>

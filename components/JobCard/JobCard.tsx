@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import AccordionButton from "./AccordionButton";
 import TechItem from "./TechItem";
 import "./style.css";
+import Image from "next/image";
 
 type Technology = {
   name: string
@@ -45,11 +46,14 @@ const JobCard: React.FC<Props> = (props) => {
     <article className="job-card group relative flex flex-col pl-6 gap-4 sm:w-[50%] sm:even:translate-x-full pr-0 sm:odd:pl-0 odd:pr-6">
       <span className="circle gradient absolute top-0 left-[-10px] h-[24px] w-[24px] rounded-full z-[1]"></span>
       <div className="job-picture top-0 p-2 flex flex-col justify-center items-center gap-4 sm:absolute h-[120px] w-[120px] object-contain rounded-3xl bg-white">
-        <img
+        <Image
           className="w-full h-auto"
           src={`/jobs/${jobPicture}`}
           alt={`Logo of ${jobCompany} where I worked as a ${jobTitle}`}
           loading="lazy"
+          width={100}
+          height={100}
+          loader={(src) =>src.src}
         />
       </div>
       <div className="flex flex-col justify-center">

@@ -1,0 +1,36 @@
+.reference-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.reference-image {
+  border-radius: 100%;
+}
+
+.reference-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.reference-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.reference-description {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
+
+.reference-description .info {
+
+}
+
+@media screen and (max-width: 600px) {
+  .reference-picture {
+    border: 3px solid var(--hover);
+  }
+}
