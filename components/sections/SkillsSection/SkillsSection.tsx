@@ -140,7 +140,7 @@ const SkillsSection: React.FC =  () => {
                   loading="lazy"
                   width={100}
                   height={100}
-                  loader={(src) => src.src}
+                  loader={(src) => `${src.src}?w=${src.width}`}
                   style={{ height: "auto", width: "45%" }}
                 />
                 {skill.skill}

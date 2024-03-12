@@ -87,7 +87,7 @@ const FooterSection = () => {
               loading="lazy"
               width={100}
               height={100}
-              loader={(src) => src.src}
+              loader={(src) => `${src.src}?w=${src.width}`}
             />
             <div className="flex flex-col">
               <p className="text-light-texto-primary dark:text-dark-texto-primary font-extrabold -mb-1">

@@ -17,7 +17,7 @@ const TechItem: React.FC<Props> = (props) => {
         loading="lazy"
         width={100}
         height={100}
-        loader={(src) => src.src}
+        loader={(src) => `${src.src}?w=${src.width}`}
       />
       {name}
     </li>

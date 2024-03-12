@@ -16,7 +16,7 @@ const HeroCard: React.FC<HeroProps> = (props) => {
         // width="64px"
         width={100}
         height={100}
-        loader={(src) => src.src}
+        loader={(src) => `${src.src}?w=${src.width}`}
         style={{ width: "64px", height: "64px" }}
       />
 

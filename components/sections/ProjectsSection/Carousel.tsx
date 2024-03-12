@@ -68,7 +68,7 @@ const Carousel: React.FC<Props> = ({ images, path = "" }) => {
               loading="lazy"
               width={100}
               height={100}
-              loader={(src) => src.src}
+              loader={(src) => `${src.src}?w=${src.width}`}
             />
           </li>
         ))}
