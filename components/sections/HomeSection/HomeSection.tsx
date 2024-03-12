@@ -15,7 +15,7 @@ const HomeSection = () => {
     >
       <div className="flex flex-col gap-12 text-center items-center justify-center">
         <h1 className="text-[1.1rem] text-light-gray-primary py-[9px] px-8 w-fit font-semibold rounded-3xl bg-[#0001] dark:bg-[#fff1] dark:text-dark-texto-secondary">
-          Hi! <span className="hi inline">👋</span> I'm {FIRST_NAME} {LAST_NAME}
+          Hi! <span className="hi inline">👋</span> I&apos;m {FIRST_NAME} {LAST_NAME}
         </h1>
         <p
           className="text-[3.3rem] sm:text-[3.3rem] md:text-[4.2rem] font-black leading-[3rem] sm:leading-[4rem] text-[#111] dark:text-[#f3f3f3]"

@@ -1,18 +1,23 @@
 import React from "react";
 import { ReferenceProps } from "./ReferenceSection";
 import "./style-card.css";
+import Image from "next/image";
 
 const ReferenceSectionCard: React.FC<ReferenceProps> = (props) => {
   const { name, picture, position, mobile, email, media, description } = props;
   return (
     <article className="reference-card">
-      <img
+      <Image
         className="reference-image"
         src={`/references/${picture}`}
         alt={name}
         loading="lazy"
-        height="64px"
-        width="64px"
+        // height="64px"
+        // width="64px"
+        width={100}
+        height={100}
+        loader={(src) => src.src}
+        style={{ width: "64px", height: "64px" }}
       />
 
       <div className="reference-data">

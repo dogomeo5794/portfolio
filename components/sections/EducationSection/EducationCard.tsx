@@ -1,5 +1,6 @@
 import React from "react";
 import { EducationProps } from "./EducationSection";
+import Image from "next/image";
 
 const EducationCard: React.FC<EducationProps> = (props) => {
   const {
@@ -15,11 +16,14 @@ const EducationCard: React.FC<EducationProps> = (props) => {
   return (
     <article className="flex gap-4">
       <div className="flex justify-center items-center bg-white object-contain rounded-3xl overflow-hidden aspect-square w-[90px] h-[90px] min-w-[90px] sm:w-[110px] sm:h-[110px] sm:min-w-[110px]">
-        <img
+        <Image
           className="w-full h-auto"
           src={`/education/${educationPicture}`}
           alt={`Picture of ${educationTitle} degree`}
           loading="lazy"
+          width={100}
+          height={100}
+          loader={(src) => src.src}
         />
       </div>
       <div className="flex flex-col gap-3">

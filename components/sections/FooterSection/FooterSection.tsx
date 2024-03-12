@@ -1,7 +1,10 @@
+"use client"
+
 import React from "react";
 
 import LogoIcon from "@/components/Layouts/Sections/LogoIcon/LogoIcon";
 import { FIRST_NAME, GITHUB_PORTFOLIO_THEME, LAST_NAME, RESUME_URL } from "@/lib/static-data";
+import Image from "next/image";
 const thumbnail = "/music/tugmangpreso.webp";
 const artist = "Loonie";
 const song = "Tugmang Preso";
@@ -77,11 +80,14 @@ const FooterSection = () => {
             href={link}
             target="_blank"
           >
-            <img
+            <Image
               src={thumbnail}
               alt={`Song thumbnail of the song ${song} by ${artist}`}
               className="flex items-center justify-center text-[0.7rem] text-center h-20 w-20 sm:w-12 sm:h-12 bg-light-gray-secondary dark:bg-dark-gray-secondary rounded-xl"
               loading="lazy"
+              width={100}
+              height={100}
+              loader={(src) => src.src}
             />
             <div className="flex flex-col">
               <p className="text-light-texto-primary dark:text-dark-texto-primary font-extrabold -mb-1">
@@ -95,7 +101,7 @@ const FooterSection = () => {
           </a>
         </div>
         <small className="text-light-gray-primary dark:text-dark-gray-primary text-[0.75rem] max-w-md sm:text-end">
-          This portfolio is open source. Feel free to use it, but don't forget
+          This portfolio is open source. Feel free to use it, but don&apos;t forget
           to leave a ⭐ on the repo. You can find the repository{" "}
           <a
             className="text-light-texto-primary dark:text-dark-texto-primary hover:underline"

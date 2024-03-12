@@ -34,7 +34,9 @@ const Carousel: React.FC<Props> = ({ images, path = "" }) => {
         observer.observe(carouselRef.current.children[i]);
       }
     }
-  }, []);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [carouselRef]);
 
   const changeSlide = (direction: string) => {
     let nextSlide = direction === "left" ? currentSlide - 1 : currentSlide + 1;
@@ -56,7 +58,7 @@ const Carousel: React.FC<Props> = ({ images, path = "" }) => {
         {images.map((image, index) => (
           <li
             className="flex-shrink-0 flex-grow-0 snap-start snap-always gap-0 w-full"
-            key={image}
+            key={index}
             data-index={index}
           >
             <Image
