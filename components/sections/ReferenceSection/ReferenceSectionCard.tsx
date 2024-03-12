@@ -45,7 +45,7 @@ const ReferenceSectionCard: React.FC<ReferenceProps> = (props) => {
             <span className="label">Media:</span>{" "}
             <span className="value">
               {media && (
-                <a href={media} className="font-bold underline">LinkedIn</a>
+                <a href={media} className="font-bold underline" target="_blank">LinkedIn</a>
               )}
               {!media && "N/A"}
             </span>
