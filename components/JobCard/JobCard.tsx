@@ -101,7 +101,8 @@ const JobCard: React.FC<Props> = (props) => {
           {jobDescription}
         </p>
         <div
-          className={`accordion flex flex-col overflow-hidden transition-all gap-6 duration-300 ${showMore ? 'max-h-accordion-expanded' : 'max-h-0'}`}
+          // className={`accordion flex flex-col overflow-hidden transition-all gap-6 duration-300 ${showMore ? 'max-h-accordion-expanded' : 'max-h-0'}`}
+          className={`accordion flex flex-col overflow-hidden transition-all gap-6 duration-300 ${showMore ? 'max-h-full' : 'max-h-0'}`}
         >
           <div className="flex flex-col gap-2 mt-6">
             <h2 className="text-light-texto-primary dark:text-dark-texto-primary font-bold">

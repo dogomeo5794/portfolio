@@ -12,7 +12,7 @@ const TechItem: React.FC<Props> = (props) => {
     <li className="flex items-center gap-1 text-[0.91rem]">
       <Image
         className="h-4 w-auto"
-        src={`/icons/${icon}.svg`}
+        src={icon}
         alt={name}
         loading="lazy"
         width={100}

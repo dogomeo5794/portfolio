@@ -1,13 +1,5 @@
 export const skills = [
   {
-    skill: "PHP",
-    logo: "php.svg",
-  },
-  {
-    skill: "CodeIgniter",
-    logo: "codeigniter.svg",
-  },
-  {
     skill: "JavaScript",
     logo: "javascript.svg",
   },
@@ -20,8 +12,28 @@ export const skills = [
     logo: "css.svg",
   },
   {
-    skill: "MySQL",
-    logo: "mysql.svg",
+    skill: "VueJS",
+    logo: "vue-9.svg",
+  },
+  {
+    skill: "Quasar",
+    logo: "quasar.svg",
+  },
+  {
+    skill: "NodeJS",
+    logo: "node.svg",
+  },
+  {
+    skill: "NestJS",
+    logo: "nestjs.svg",
+  },
+  {
+    skill: "NextJS",
+    logo: "nextjs.svg",
+  },
+  {
+    skill: "ReactJS",
+    logo: "react.svg",
   },
   {
     skill: "Bootstrap",
@@ -40,41 +52,32 @@ export const skills = [
     logo: "github.svg",
   },
   {
-    skill: "Node.js",
-    logo: "node.svg",
+    skill: "Bitbucket",
+    logo: "bitbucket-icon.svg",
   },
   {
-    skill: "Next.js",
-    logo: "nextjs.svg",
+    skill: "Jira",
+    logo: "jira-3.svg",
   },
-
   {
-    skill: "WordPress",
-    logo: "wordpress.svg",
+    skill: "PHP",
+    logo: "php.svg",
+  },
+  {
+    skill: "Laravel",
+    logo: "laravel-2.svg",
+  },
+  {
+    skill: "MySQL",
+    logo: "mysql.svg",
+  },
+  {
+    skill: "MongoDB",
+    logo: "mongodb-icon-2.svg",
   },
   {
     skill: "VS Code",
     logo: "vscode.svg",
-  },
-  {
-    skill: "AWS",
-    logo: "aws.svg",
-  },
-  {
-    skill: "GCP",
-    logo: "gcp.svg",
-  },
-  {
-    skill: "Figma",
-    logo: "figma.svg",
-  },
-  {
-    skill: "Adobe Photoshop",
-    logo: "photoshop.svg",
-  },
-  {
-    skill: "Styled Components",
-    logo: "styledcomponents.svg",
   },
   {
     skill: "Chrome DevTools",
@@ -85,31 +88,15 @@ export const skills = [
     logo: "npm.svg",
   },
   {
-    skill: "Netlify",
-    logo: "netlify.svg",
-  },
-  {
     skill: "Vercel",
     logo: "vercel.svg",
   },
   {
-    skill: "Replit",
-    logo: "replit.svg",
+    skill: "Docker",
+    logo: "docker-4.svg",
   },
   {
-    skill: "Astro",
-    logo: "astro.svg",
-  },
-  {
-    skill: "Canva",
-    logo: "canva.svg",
-  },
-  {
-    skill: "Streamlit",
-    logo: "streamlit.svg",
-  },
-  {
-    skill: "cPanel",
-    logo: "cpanel.svg",
+    skill: "PM2",
+    logo: "pm2.svg",
   },
 ];

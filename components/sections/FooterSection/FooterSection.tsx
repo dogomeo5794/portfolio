@@ -5,12 +5,44 @@ import React from "react";
 import LogoIcon from "@/components/Layouts/Sections/LogoIcon/LogoIcon";
 import { FIRST_NAME, GITHUB_PORTFOLIO_THEME, LAST_NAME, RESUME_URL } from "@/lib/static-data";
 import Image from "next/image";
-const thumbnail = "/music/tugmangpreso.webp";
-const artist = "Loonie";
-const song = "Tugmang Preso";
-const link = "https://open.spotify.com/track/3iF6qURjmUsozda5wS6nkz";
+const thumbnail = "/music/kahit-maputi-na-ang-buhok-ko.jpg";
+const artist = "Moira Dela Torre";
+const song = "Kahit Maputi Na Ang Buhok Ko";
+const link = "https://open.spotify.com/track/60FXqDiSBkzdexOB3Ai3om";
+const navLinks = [
+  {
+    label: "Start",
+    tag: "#home",
+    target: "_self",
+  },
+  {
+    label: "Skills",
+    tag: "#skills",
+    target: "_self",
+  },
+  {
+    label: "Experience",
+    tag: "#jobs",
+    target: "_self",
+  },
+  {
+    label: "Projects",
+    tag: "#projects",
+    target: "_self",
+  },
+  {
+    label: "Education",
+    tag: "#education",
+    target: "_self",
+  },
+  {
+    label: "Resume",
+    tag: RESUME_URL,
+    target: "_blank",
+  },
+]
 
-const FooterSection = () => {
+const FooterSection: React.FC = () => {
   return (
     <footer className="flex flex-col border-t-[1px] border-[#0001] dark:border-[#ffffff15] py-10 gap-14">
       <section className="flex flex-col sm:flex-row sm:items-center gap-8 sm:justify-between">
@@ -19,55 +51,17 @@ const FooterSection = () => {
           {FIRST_NAME} {LAST_NAME}
         </div>
         <ul className="flex flex-col sm:flex-row gap-3 sm:gap-8">
-          <li>
-            <a
-              className="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
-              href="#home"
-            >
-              Start
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
-              href="#skills"
-            >
-              Skills
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
-              href="#jobs"
-            >
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
-              href="#projects"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
-              href="#education"
-            >
-              Education
-            </a>
-          </li>
-          <li>
-            <a
-              className="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
-              href={RESUME_URL}
-              target="_blank"
-            >
-              Resume
-            </a>
-          </li>
+          {navLinks.length > 0 && navLinks.map((item, index) => (
+            <li>
+              <a
+                className="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
+                href={item.tag}
+                target={item.target}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </section>
       <section className="flex flex-col sm:flex-row sm:items-center gap-8 sm:justify-between">
