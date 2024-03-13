@@ -13,7 +13,7 @@ export interface ProjectProps {
   id: string
   carouselImages: Array<string>
   projectTitle: string
-  projectDescription: string
+  projectDescription: Array<string>
   projectTechnologies: Array<Technology>
   projectRepo?: string
   projectSite?: string

@@ -107,9 +107,13 @@ const ProjectModal: React.FC<Props> = (props) => {
               </a>
             )}
           </div>
-          <p className="text-light-texto-secondary dark:text-dark-texto-secondary text-[0.91rem]">
-            {projectDescription}
-          </p>
+          <div>
+            {projectDescription.length > 0 && projectDescription.map((description, index) => (
+              <p className="text-light-texto-secondary dark:text-dark-texto-secondary text-[0.91rem] mb-[15px] last:mb-0" key={index}>
+                {description}
+              </p>
+            ))}
+          </div>
           <div className="flex flex-col gap-3 mb-1">
             <h2 className="text-light-texto-primary dark:text-dark-texto-primary font-bold text-[0.91rem]">
               Technologies
