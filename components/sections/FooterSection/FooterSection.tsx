@@ -67,7 +67,7 @@ const FooterSection: React.FC = () => {
       <section className="flex flex-col sm:flex-row sm:items-center gap-8 sm:justify-between">
         <div className="flex flex-col gap-2">
           <small className="text-light-gray-primary dark:text-dark-gray-primary text-[0.75rem]">
-            Weekly music discovery:
+            Favorite music:
           </small>
           <a
             className="flex items-center gap-3 p-1 hover:bg-[#0001] dark:hover:bg-[#fff1] rounded-2xl"

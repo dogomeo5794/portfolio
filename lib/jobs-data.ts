@@ -191,7 +191,7 @@ export const jobs = [
     jobPicture: "nonescost/nonescost.png",
     jobColor: "#0086eb",
     jobTitle: "Web Developer",
-    jobTime: "December 2018 - March 2019 (400+ hrs)",
+    jobTime: "December 2017 - March 2018 (400+ hrs)",
     jobCompany: "Northern Negros State College of Science and Technology",
     jobCompanySite: "https://nonescost.edu.ph/",
     jobDescription:

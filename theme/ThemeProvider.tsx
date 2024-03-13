@@ -8,7 +8,6 @@ export const defaultTheme = "dark"
 const ThemeProvider: React.FC<{children: React.ReactNode}> = ({children}) => {
   const [theme, setTheme] = useState<string>(defaultTheme)
   const handleToggleTheme = (value: string) => {
-    console.log('toggleTheme', value)
     setTheme(value)
   }
   const ctxValue = {
