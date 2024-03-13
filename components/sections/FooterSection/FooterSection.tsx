@@ -52,7 +52,7 @@ const FooterSection: React.FC = () => {
         </div>
         <ul className="flex flex-col sm:flex-row gap-3 sm:gap-8">
           {navLinks.length > 0 && navLinks.map((item, index) => (
-            <li>
+            <li key={index}>
               <a
                 className="text-light-texto-secondary dark:text-dark-texto-secondary font-medium text-[0.91rem] hover:text-light-texto-primary dark:hover:text-dark-texto-primary transition-colors hover:underline"
                 href={item.tag}
