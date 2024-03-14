@@ -50,6 +50,20 @@ const MenuLinks: Array<TypeMenuLink> = [
     tag: "#education",
     target: "_self"
   },
+  // {
+  //   icon: <EducationSvgIcon />,
+  //   dataIcon: "contact",
+  //   label: "Contact",
+  //   tag: "#contact",
+  //   target: "_self"
+  // },
+  // {
+  //   icon: <EducationSvgIcon />,
+  //   dataIcon: "references",
+  //   label: "References",
+  //   tag: "#references",
+  //   target: "_self"
+  // },
   {
     icon: <LinkedInSvgIcon />,
     dataIcon: "linkedin",

@@ -1,3 +1,5 @@
+export const MOBILE_DISPLAY = "+63 946 9572 178";
+export const MOBILE_LINK = "";
 export const EMAIL_ADDRESS_DISPLAY = "dogomeo5794@gmail.com";
 export const EMAIL_ADDRESS_LINK = "mailto:dogomeo5794@gmail.com";
 export const INSTAGRAM_LINK = "https://www.instagram.com/rdogomeo";

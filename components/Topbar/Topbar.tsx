@@ -30,7 +30,7 @@ const Topbar = () => {
 
   
   return (
-    <nav className={isBordered ? 'bordered' : ''}>
+    <nav className={`${isBordered ? 'bordered' : ''} group-[.is-fixed-header]:fixed group-[.is-fixed-header]:w-full group-[.is-fixed-header]:bg-light-fondo-primary group-[.is-fixed-header]:dark:bg-dark-fondo-primary group-[.is-fixed-header]:z-[9999] group-[.is-fixed-header]:h-[80px]`}>
       <div className="flex justify-between items-center pt-4 w-[90vw] mx-auto lg:w-[900px]">
         <LogoIcon />
         <ThemToggle />

@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import TechItem from "@/components/JobCard/TechItem";
 import Carousel from "./Carousel";
 import { ProjectProps } from "./ProjectsSection";
+import "./style-modal.css"
 
 interface Props extends ProjectProps {
   showModal?: boolean
@@ -48,18 +49,19 @@ const ProjectModal: React.FC<Props> = (props) => {
       ref={modalRef}
       style={withScroll ? {overflow: "scroll"} : {}}
     >
-      <div className="my-1 relative bg-light-fondo-secondary dark:bg-dark-fondo-secondary flex flex-col h-fit w-[95%] max-w-[600px] rounded-2xl overflow-hidden lg:grid lg:grid-cols-modal lg:max-h-[1024px] lg:max-w-[85%]">
+      <div className="modal-content slide-down my-1 relative bg-light-fondo-secondary dark:bg-dark-fondo-secondary flex flex-col h-fit w-[95%] max-w-[600px] rounded-2xl overflow-hidden lg:grid lg:grid-cols-modal lg:max-h-[1024px] lg:max-w-[85%]">
         <Carousel images={carouselImages} path={id} />
         <article className="flex flex-col p-6 gap-8 lg:py-0 lg:mt-12 lg:mb-8">
           <h1 className="font-extrabold text-light-texto-primary dark:text-dark-texto-primary text-2xl sm:text-3xl">
             {projectTitle}
           </h1>
           <div className="flex items-center gap-2">
-            {projectRepo && (
+            {projectRepo && projectRepo.length > 0 && projectRepo.map((repo, index) => (
               <a
-                href={projectRepo}
+                href={repo}
                 className="justify-center p-3 pr-4 flex items-center gap-1 sm:gap-2 font-semibold text-sm text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-lg hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
                 target="_blank"
+                key={index}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,12 +81,13 @@ const ProjectModal: React.FC<Props> = (props) => {
                 </svg>
                 GitHub
               </a>
-            )}
-            {projectSite && (
+            ))}
+            {projectSite && projectSite.length > 0 && projectSite.map((site, index) => (
               <a
-                href={projectSite}
+                href={site}
                 className="justify-center p-3 pr-4 flex items-center gap-1 sm:gap-2 font-semibold text-sm text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-lg hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
                 target="_blank"
+                key={index}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +108,7 @@ const ProjectModal: React.FC<Props> = (props) => {
                 </svg>
                 Go to site
               </a>
-            )}
+            ))}
           </div>
           <div>
             {projectDescription.length > 0 && projectDescription.map((description, index) => (

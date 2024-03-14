@@ -57,12 +57,12 @@ const Carousel: React.FC<Props> = ({ images, path = "" }) => {
       >
         {images.map((image, index) => (
           <li
-            className="flex-shrink-0 flex-grow-0 snap-start snap-always gap-0 w-full"
+            className="flex-shrink-0 flex-grow-0 snap-start snap-always gap-0 w-full flex items-center"
             key={index}
             data-index={index}
           >
             <Image
-              className="w-full h-full"
+              className="w-full h-auto"
               src={`/projects/${path}/${image}`}
               alt=""
               loading="lazy"

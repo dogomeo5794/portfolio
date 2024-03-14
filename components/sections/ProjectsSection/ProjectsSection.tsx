@@ -15,8 +15,8 @@ export interface ProjectProps {
   projectTitle: string
   projectDescription: Array<string>
   projectTechnologies: Array<Technology>
-  projectRepo?: string
-  projectSite?: string
+  projectRepo: Array<string>
+  projectSite: Array<string>
   projectSlogan?: string
 }
 

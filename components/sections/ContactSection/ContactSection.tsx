@@ -1,6 +1,7 @@
 import React from "react";
 
 // import DribbbleCard from "@/components/ContactCards/DribbbleCard";
+import MobileCard from "@/components/ContactCards/MobileCard";
 import EmailCard from "@/components/ContactCards/EmailCard";
 import GithubCard from "@/components/ContactCards/GithubCard";
 import InstagramCard from "@/components/ContactCards/InstagramCard";
@@ -21,6 +22,7 @@ const ContactSection = () => {
       <ul
         className={`${style.contactLinks} contact-links grid gap-x-8 gap-y-12`}
       >
+        <MobileCard />
         <EmailCard />
         <LinkedinCard />
         <GithubCard />

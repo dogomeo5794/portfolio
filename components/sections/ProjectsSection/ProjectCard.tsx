@@ -58,11 +58,12 @@ const ProjectCard: React.FC<Props> = (props) => {
           </span>
         </div>
         <div className="flex w-fit gap-1">
-          {projectRepo && (
+          {projectRepo && projectRepo.length > 0 && projectRepo.map((repo, index) => (
             <a
-              href={projectRepo}
+              href={repo}
               className="justify-center p-2 flex items-center gap-1 font-semibold text-[0.91rem] text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-lg hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
               target="_blank"
+              key={index}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -81,12 +82,13 @@ const ProjectCard: React.FC<Props> = (props) => {
                 </>
               </svg>
             </a>
-          )}
-          {projectSite && (
+          ))}
+          {projectSite && projectSite.length > 0 && projectSite.map((site, index) => (
             <a
-              href={projectSite}
+              href={site}
               className="justify-center p-2 flex items-center gap-1 font-semibold text-[0.91rem] text-light-texto-secondary dark:text-dark-texto-secondary bg-[#0001] dark:bg-[#fff1] transition-colors rounded-lg hover:bg-light-texto-primary dark:hover:bg-dark-texto-primary hover:text-light-fondo-primary dark:hover:text-dark-fondo-primary"
               target="_blank"
+              key={index}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,7 +108,7 @@ const ProjectCard: React.FC<Props> = (props) => {
                 </>
               </svg>
             </a>
-          )}
+          ))}
         </div>
       </div>
     </article>

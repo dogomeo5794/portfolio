@@ -10,7 +10,7 @@ const HomeSection = () => {
 
   return (
     <section
-      className="h-[calc(100dvh-4rem)] min-h-[580px] flex flex-col justify-center items-center text-center gap-16"
+      className="group-[.is-fixed-header]:pt-[82px] h-[calc(100dvh-4rem)] min-h-[580px] flex flex-col justify-center items-center text-center gap-16"
       id="home"
     >
       <div className="flex flex-col gap-12 text-center items-center justify-center">

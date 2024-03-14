@@ -16,7 +16,8 @@ export interface ReferenceProps {
 
 const ReferenceSection: React.FC = () => {
   return (
-    <section>
+    <section className="" id="references">
+    {/* <section className="flex flex-col pt-16 pb-20 gap-16" id="references"> */}
       <h1 className="font-black text-light-texto-primary dark:text-dark-texto-primary text-[2.5rem]">
         References<span className="text-primary">.</span>
       </h1>

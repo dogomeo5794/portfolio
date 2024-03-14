@@ -11,10 +11,12 @@ import ProjectsSection from "@/components/sections/ProjectsSection/ProjectsSecti
 import EducationSection from "@/components/sections/EducationSection/EducationSection";
 import FooterSection from "@/components/sections/FooterSection/FooterSection";
 import ReferenceSection from "@/components/sections/ReferenceSection/ReferenceSection";
+import "./style-page.css";
 
 export default function Home() {
   return (
-    <>
+    <main className="">
+    {/* <main className="group is-fixed-header"> */}
       <Topbar />
       <Main>
           <HomeSection />
@@ -27,6 +29,6 @@ export default function Home() {
           <ReferenceSection />
           <FooterSection />
       </Main>
-    </>
+    </main>
   )
 }
