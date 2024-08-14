@@ -21,3 +21,28 @@
     left: calc(100% - 10px);
   }
 }
+
+.accordion {
+  /* transition: all 1s ease-in-out; */
+}
+
+.accordion.accordion-expanded {
+  height: 50%;
+  animation: animate 1s;
+}
+
+.accordion.accordion-collapsed {
+  max-height: 0;
+}
+
+@keyframes animate {
+  0% {
+    max-height: 0%;
+  }
+  50% {
+    max-height: 50%;
+  }
+  100% {
+    max-height: 100%;
+  }
+}
